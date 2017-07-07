@@ -1,0 +1,24 @@
+{
+  "name": "phase_1_benchmarks",
+  "version": "1.0.0",
+  "description": "3, 2, 1, Contacts Skills; Contacs with testing; To-Do-List",
+  "main": "task.js",
+  "scripts": {
+    "test": "mocha Tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkallas/Phase-1-Benchmarks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pkallas/Phase-1-Benchmarks/issues"
+  },
+  "homepage": "https://github.com/pkallas/Phase-1-Benchmarks#readme",
+  "dependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "node-print": "0.0.4"
+  }
+}
