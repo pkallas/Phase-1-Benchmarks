@@ -20,8 +20,6 @@ const addContacts = (contactData) => {
 }
 
 const printContacts = (contacts) => {
-    let arr = []
-    let finalSort = {}
     let sorted = allContacts.sort((a,b) => {
 
       if (a.name < b.name ) {
