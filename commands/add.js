@@ -5,7 +5,7 @@ const tasksParsed = JSON.parse(tasks);
 
 const add = (task) => {
   try {
-    if (!process.argv[3]) {
+    if (!task) {
       throw new Error()
     }
     let toDo = new Object();
