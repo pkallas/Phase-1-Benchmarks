@@ -18,5 +18,6 @@ switch(process.argv[2]){
     break;
 
   default:
-  console.log('Please enter command after task.js. Commands are add, list, and done')
+  console.log('Please enter command after task.')
+  console.log('Commands are add, list, and done')
 }

@@ -1,70 +1,6 @@
 'use strict'
 const print = require('node-print')
-
-let allContacts = [];
-let failedContacts = [];
-
-const addContact = (firstName, lastName, email) => {
-    if (typeof(firstName) !== 'string' || typeof(lastName) !== 'string' || typeof(email) !== 'string') {
-      throw new Error('Could not import ' + failedContacts.length + ' contacts');
-    }
-    let contact = new Object();
-    contact.name = firstName + " " + lastName;
-    contact.email = email;
-    allContacts.push(contact);
-}
-
-const addContacts = (contactData) => {
-  contactData.forEach(function (m) {
-    let first = m.first_name
-    let last = m.last_name
-    let mail = m.email
-    try {
-      addContact(first, last, mail)
-    } catch(error) {
-      failedContacts.push(m)
-    }
-  })
-    // try { let i = 0
-    //   do {
-    //       let first = contactData[i].first_name
-    //       let last = contactData[i].last_name
-    //       let mail = contactData[i].email
-    //       addContact(first, last, mail)
-    //       i++
-    //     } while (i < contactData.length) }
-    // catch (error) {
-    //   console.log(error);
-    //   console.log(failedContacts);
-    // }
-}
-
-const printContacts = (contacts) => {
-    let arr = []
-    let finalSort = {}
-    let sorted = allContacts.sort((a,b) => {
-
-      if (a.name < b.name ) {
-        return -1
-      }
-
-      if (a.name > b.name) {
-        return 1
-      }
-
-      return 0
-    })
-
-    console.log("Loading contact data...")
-    console.log("...Finished loading contact data.")
-    print.pt(sorted)
-    if (failedContacts.length > 0) {
-      console.log('Could not import ' + failedContacts.length + ' contacts')
-      console.log(failedContacts)
-    }
-}
-
-addContacts([{
+const data = [{
   "first_name": "Tanny",
   "last_name": "Vibert",
   "email": "tvibert0@illinois.edu"
@@ -144,5 +80,70 @@ addContacts([{
   "first_name": "Winston",
   "last_name": "Hixley",
   "email": "whixleyj@homestead.com"
-}])
+}]
+
+let allContacts = [];
+let failedContacts = [];
+
+const addContact = (firstName, lastName, email) => {
+    if (typeof(firstName) !== 'string' || typeof(lastName) !== 'string' || typeof(email) !== 'string') {
+      throw new Error('Could not import ' + failedContacts.length + ' contacts');
+    }
+    let contact = new Object();
+    contact.name = firstName + " " + lastName;
+    contact.email = email;
+    allContacts.push(contact);
+}
+
+const addContacts = (contactData) => {
+  contactData.forEach(function (m) {
+    let first = m.first_name
+    let last = m.last_name
+    let mail = m.email
+    try {
+      addContact(first, last, mail)
+    } catch(error) {
+      failedContacts.push(m)
+    }
+  })
+    // try { let i = 0
+    //   do {
+    //       let first = contactData[i].first_name
+    //       let last = contactData[i].last_name
+    //       let mail = contactData[i].email
+    //       addContact(first, last, mail)
+    //       i++
+    //     } while (i < contactData.length) }
+    // catch (error) {
+    //   console.log(error);
+    //   console.log(failedContacts);
+    // }
+}
+
+const printContacts = (contacts) => {
+    let arr = []
+    let finalSort = {}
+    let sorted = allContacts.sort((a,b) => {
+
+      if (a.name < b.name ) {
+        return -1
+      }
+
+      if (a.name > b.name) {
+        return 1
+      }
+
+      return 0
+    })
+
+    console.log("Loading contact data...")
+    console.log("...Finished loading contact data.")
+    print.pt(sorted)
+    if (failedContacts.length > 0) {
+      console.log('Could not import ' + failedContacts.length + ' contacts')
+      console.log(failedContacts)
+    }
+}
+
+addContacts(data)
 printContacts()
