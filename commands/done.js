@@ -8,14 +8,16 @@ const done = (num) => {
     let index = tasksParsed.findIndex((task) => {
       return task.id === +num
     })
-    if (index < 0) {
+    if (index === -1) {
       throw new Error('ID ' + num + ' does not exist')
     }
+    console.log('Task ' + num + ' was completed!')
     tasksParsed.splice(index, 1)
     fs.writeFileSync('./tasks.json', JSON.stringify(tasksParsed));
     }
   catch(error) {
-    console.log('ID ' + num + ' does not exist')
+    num === undefined ? console.log('Please provide an ID; use list to see available IDs') :
+    console.log('ID ' + num + ' does not exist; use list to see available IDs')
   }
 }
 
