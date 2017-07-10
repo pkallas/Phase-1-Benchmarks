@@ -1,32 +1,36 @@
-const assert = require('chai').assert
+const expect = require('chai').expect
 const add = require('.././commands/add')
 const print = require('node-print')
 const done = require('.././commands/done')
+const list = [{"task":"Buy coffee","id":1}]
 
   describe('add', function() {
-    it('Should be a function', function() {
-      assert.isFunction(add)
-    })
-
-    it('Should not be null or undefined', function() {
-      assert.exists(add, 'add is neither null or undefined')
-    })
-
-    // it('Should add a task to the list', function() {
-    //   assert.changes(add, tasksParsed)
-    // })
-
-    it('Should add a task to the list', function() {
-      add('Buy coffee')
-      const fs = require('fs')
-      const tasks = fs.readFileSync('./tasks.json', 'utf8')
-      const tasksParsed = JSON.parse(tasks)
-      assert.isNotEmpty(tasksParsed)
+    beforeEach(function() {
       done(1)
     })
 
-    // it('Should fail when not given an argument', function() {
-    //   assert.throws(add, Error())
-    // })
+    it('Should be a function', function() {
+      expect(add).to.be.a('function')
+    })
+
+    it('Should add Buy coffee with id of 1 to the list', function() {
+      const fs = require('fs')
+      const tasks = fs.readFileSync('./tasks.json', 'utf8')
+      const tasksParsed = JSON.parse(tasks)
+      add('Buy coffee')
+      expect(list).to.deep.equal(tasksParsed)
+    })
+
+    it('Should add a task to the list', function() {
+      const fs = require('fs')
+      const tasks = fs.readFileSync('./tasks.json', 'utf8')
+      const tasksParsed = JSON.parse(tasks)
+      add('Buy coffee')
+      expect(tasksParsed).to.have.lengthOf(1)
+    })
+
+    afterEach(function() {
+      done(1)
+    })
 
   })
