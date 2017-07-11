@@ -5,28 +5,39 @@
     <meta charset='utf-8'>
     <title>Boogle</title>
     <link rel='stylesheet' type='text/css' href='shared.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Delius Unicase'>
   </head>
-  <header class='header-left'>Web | <a href='?'>Images</a> | <a href='?'>Maps</a> | <a href='?'>News</a>
-    | <a href='?'>more</a>
-  </header>
-  <header class='header-right'><a href='?'>iBoogle</a> | <a href='?'>Sign In</a>
-  </header>
   <body>
-    <div class='Center-page'>
-      <h1 id='Boogle'>Boogle</h1>
-      <form>
-        <input type='text' name='search'>
-      </form>
-      <p>
-        <a href='?'>Advanced Search Preferences</a>
-      </p>
-      <form>
-        <button type='submit'>Boogle Search
-        <button type='submit'>I'm Feeling Lucky!
-      </form>
+    <div class='flex-container-head'>
+      <header class='header-left'><a class='header-margin' href='?'>Web</a> | <a class='header-margin' href='?'>
+        Images</a> | <a class='header-margin' href='?'>Maps</a> | <a class='header-margin' href='?'>News</a>
+        | <a class='header-margin' href='?'>more</a>
+      </header>
+      <header class='header-right'><a class='header-margin' href='?'>iBoogle</a>
+        | <a class='header-margin' href='?'>Sign In</a>
+      </header>
     </div>
-  </body>
-  <footer><a href='?'>Advertising Programs</a> | <a href='?'>Business Solutions</a> |
-    <a href='?'>About Boogle</a>
-  </footer>
+      <div class='top-center'>
+        <h1 id='Boogle'>Boogle</h1>
+      </div>
+      <div class='mid-center'
+        <p>
+          <form>
+            <input class='search' id='search-bar' type='text' name='search'>
+          </form>
+          <a class='search' href='?' id='search-link'>Advanced Search Preferences</a>
+        </p>
+      </div>
+      <div class='bottom-center'>
+          <form>
+            <button class='search' type='submit' id='Boogle-Search'>Boogle Search
+            <button class='search' type='submit' id="I'm-Feeling-Lucky">I'm Feeling Lucky!
+          </form>
+      </div>
+      <footer class='home-footer'><a class='footer-margin' href='?'>Advertising Programs</a> |
+        <a class='footer-margin' href='?'>Business Solutions</a> |
+        <a class='footer-margin' href='?'>About Boogle</a>
+        <p id='watermark'>(c) 2008 Boogle</p>
+      </footer>
+    </body>
 </html>

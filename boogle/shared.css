@@ -1,0 +1,112 @@
+body {
+  font-size: 100%;
+}
+
+.flex-container-head {
+  display: flex;
+  align-items: stretch;
+}
+
+.header-left {
+  display: flex;
+  margin-right: auto
+}
+
+.header-right {
+  display: flex;
+}
+
+.header-margin {
+  display: flex;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.top-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 150px;
+}
+
+.mid-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 150px;
+}
+
+.bottom-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  margin-left: 5px;
+}
+
+#Boogle {
+  font-family: "Delius Unicase";
+  font-size: 3.5em;
+}
+
+#search-link {
+  position: relative;
+  bottom: 25px;
+  left: 100px;
+}
+
+#search-bar {
+  border-color: black;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  bottom: 25px;
+  left: 90px;
+}
+
+#Boogle-Search {
+  font-family: "Delius Unicase";
+  background-color: white;
+  border-color: black;
+  box-shadow: 2px 2px;
+  position: relative;
+  top: 145px;
+}
+
+#I\'m-Feeling-Lucky {
+  font-family: "Delius Unicase";
+  background-color: white;
+  border-color: black;
+  box-shadow: 2px 2px;
+  position: relative;
+  top: 145px;
+}
+
+.home-footer {
+  display:flex;
+  align-items: stretch;
+  justify-content: center;
+  position: relative;
+  top: 450px;
+  left: 40px;
+}
+
+.footer-margin {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#watermark {
+  position: relative;
+  top: 50px;
+  right: 250px;
+}
