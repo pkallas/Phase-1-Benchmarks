@@ -92,11 +92,11 @@ body {
 }
 
 .home-footer {
-  display:flex;
+  display: flex;
   align-items: stretch;
   justify-content: center;
   position: relative;
-  top: 450px;
+  top: 400px;
   left: 40px;
 }
 
@@ -107,6 +107,31 @@ body {
 
 #watermark {
   position: relative;
-  top: 50px;
+  top: 25px;
   right: 250px;
+}
+
+#product-column {
+  font-family: 'Offside';
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+}
+
+#video-column {
+  background-color: black;
+  border-color: red;
+  float: right;
+  design: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  /*width: 40em;*/
+}
+
+#buy-button {
+  background-color: white;
+  border-color: black;
+  box-shadow: 2px 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
