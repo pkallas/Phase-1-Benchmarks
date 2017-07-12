@@ -111,21 +111,15 @@ body {
   right: 250px;
 }
 
+#product-page {
+  design: flex;
+}
+
 #product-column {
   font-family: 'Offside';
-  /*display: flex;
-  flex-direction: column;
-  justify-content: center;*/
 }
 
 #video-column {
-  background-color: black;
-  border-color: red;
-  float: right;
-  design: flex;
-  justify-content: flex-end;
-  margin-left: auto;
-  /*width: 40em;*/
 }
 
 #buy-button {
@@ -134,4 +128,92 @@ body {
   box-shadow: 2px 2px;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+#container {
+  border: 1px solid black;
+  background-color: silver;
+  display: grid;
+  grid-template-columns: 10% 30% 60%;
+  grid-template-rows: repeat(11, 1fr);
+  grid-template-areas:
+    "mockupsMain header header"
+    "mockupsMain scrollColumn main"
+    "mockupboxes1 scrollColumn main"
+    "mockups1 scrollColumn main"
+    "mockupboxes2 scrollColumn main"
+    "mockups2 scrollColumn main"
+    "mockupboxes3 scrollColumn main"
+    "mockups3 scrollColumn main"
+    "mockupboxes4 scrollColumn main"
+    "mockups4 scrollColumn main"
+    "end footer footer"
+}
+
+#column-page-header {
+  background-color: black;
+  grid-area: header;
+}
+
+#column-page-footer {
+  background-color: silver;
+  border: 1px solid black;
+  grid-area: footer;
+}
+
+#mockups-header {
+  grid-area: mockupsMain;
+  align-self: end;
+}
+
+.boxes {
+  height: 50px;
+  width: 100px;
+  border: 1px solid black;
+  background-color: red;
+}
+
+#box1 {
+  grid-area: mockupboxes1;
+}
+
+#mockup-name1 {
+  grid-area: mockups1;
+}
+
+#box2 {
+  grid-area: mockupboxes2;
+}
+
+#mockup-name2 {
+  grid-area: mockups2;
+}
+
+#box3 {
+  grid-area: mockupboxes3;
+}
+
+#mockup-name3 {
+  grid-area: mockups3;
+}
+
+#box4 {
+  grid-area: mockupboxes4;
+}
+
+#mockup-name4 {
+  grid-area: mockups4;
+}
+
+#column2 {
+  grid-area: scrollColumn;
+  overflow: auto;
+  border: 1px solid black;
+  background-color: silver;
+}
+
+#column3 {
+  grid-area: main;
+  border: 1px solid black;
+  background-color: white;
 }
