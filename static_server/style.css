@@ -1,0 +1,13 @@
+body {
+  background-color: cyan;
+}
+
+#button-text {
+  color: white;
+  display: none;
+}
+
+#panda-pic {
+  height: 200px;
+  width: auto;
+}
