@@ -6,6 +6,7 @@
     <title>Boogle</title>
     <link rel='stylesheet' type='text/css' href='shared.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Delius Unicase'>
+    <script src='modal.js' charset="utf-8"></script>
   </head>
   <body>
     <div class='flex-container-head'>
@@ -29,10 +30,12 @@
         </p>
       </div>
       <div class='bottom-center'>
-          <form>
-            <button class='search' type='submit' id='Boogle-Search'>Boogle Search
-            <button class='search' type='submit' id="I'm-Feeling-Lucky">I'm Feeling Lucky!
-          </form>
+          <!-- <form> -->
+            <button class='search' type='submit' id='Boogle-Search'>Boogle Search</button>
+            <button class='search' type='submit' id="I'm-Feeling-Lucky">I'm Feeling Lucky!</button>
+          <!-- </form> -->
+          <p id='lucky-hover-info'>You may have seen me mention in the modal that I should
+            let the user know what this button does via a hover. Well, here ya go.</p>
       </div>
       <footer class='home-footer'><a class='footer-margin' href='?'>Advertising Programs</a> |
         <a class='footer-margin' href='?'>Business Solutions</a> |
@@ -43,15 +46,35 @@
       <div class='modal' id='modal'>
         <button class='close-button' id='close-button'>Close</button>
         <div class='modal-guts' id='modal-guts'>
-          <h1>Pop-up</h1>
+          <h1>Are You Feeling Lucky?</h1>
+          <p>This a test modal. You could ask the user if they're sure they meant
+            to hit this button, and inform them of what this button does. In an actual site,
+            this would not be a good place to put this. I had to remove the form functionality
+            of this button for the modal to work, as making a submit form would reload the page,
+            due to the fact that this page isn't linked to anywhere else. I'd recommend
+            using a hover-over instead to display to the user what this button does.
+            I've added the text below to test out the overflow in this modal, and ensure
+            that it's working as intended.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Repudiandae expedita corrupti laudantium aperiam, doloremque explicabo
             ipsum earum dicta saepe delectus totam vitae ipsam doloribus et
             obcaecati facilis eius assumenda, cumque.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
-              expedita corrupti laudantium aperiam, doloremque explicabo ipsum earum
-              dicta saepe delectus totam vitae ipsam doloribus et obcaecati facilis
-              eius assumenda, cumque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
+            expedita corrupti laudantium aperiam, doloremque explicabo ipsum earum
+            dicta saepe delectus totam vitae ipsam doloribus et obcaecati facilis
+            eius assumenda, cumque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse semper condimentum sem, sed facilisis neque. Maecenas ex
+            lectus, aliquet quis pretium ut, finibus feugiat erat. Aliquam et vestibulum odio.
+            Donec tincidunt mauris neque, eu efficitur mauris porta in. Duis efficitur
+            tellus ac diam venenatis tincidunt. Nam a accumsan sem, in lobortis nibh.
+            Nunc maximus rhoncus ex ut cursus. Vivamus sit amet mauris quis diam
+            placerat eleifend. Proin placerat, mauris eu viverra aliquet,
+            dolor leo pulvinar diam, sit amet scelerisque massa ipsum sit amet ex.
+            Aenean dignissim ultricies lobortis. Vestibulum nec arcu nulla. Quisque
+            porta, est aliquet sodales varius, felis justo finibus nibh, vel
+            ullamcorper diam quam ut velit. Maecenas nec dolor mollis, varius
+            nibh ac, consequat justo.</p>
         </div>
       </div>
     </body>
