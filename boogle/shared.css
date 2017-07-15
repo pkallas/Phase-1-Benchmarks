@@ -194,10 +194,11 @@ body {
 
 #container {
   min-height: 100vh;
+  max-height: 100vh;
   border: 1px solid black;
   background-color: silver;
   display: grid;
-  grid-template-columns: 10% 30% 60%;
+  grid-template-columns: 15% 25% 60%;
   grid-template-rows: repeat(11, 1fr);
   grid-template-areas:
     "mockupsMain header header"
@@ -224,48 +225,95 @@ body {
   grid-area: footer;
 }
 
+#headline {
+  grid-area: mockupsMain;
+  align-self: end;
+  justify-self: stretch;
+  border-bottom: 1px solid black;
+}
+
 #mockups-header {
   grid-area: mockupsMain;
   align-self: end;
+  justify-self: center;
+  position: relative;
+  right: 35px;
+}
+
+#checkbox {
+  grid-area: mockupsMain;
+  align-self: end;
+  justify-self: center;
+  position: relative;
+  left: 55px;
+  bottom: 17px;
+  border: 1px solid cyan;
+  height: 15px;
+  width: 15px;
+}
+
+#checklist {
+  grid-area: mockupsMain;
+  align-self: end;
+  justify-self: center;
+  position: relative;
+  left: 75px;
+  bottom: 15px;
 }
 
 .boxes {
-  height: 50px;
-  width: 100px;
+  height: 30px;
+  width: 130px;
   border: 1px solid black;
   background-color: red;
 }
 
 #box1 {
   grid-area: mockupboxes1;
+  align-self: center;
+  justify-self: center;
 }
 
 #mockup-name1 {
   grid-area: mockups1;
+  align-self: center;
+  justify-self: center;
 }
 
 #box2 {
   grid-area: mockupboxes2;
+  align-self: center;
+  justify-self: center;
 }
 
 #mockup-name2 {
   grid-area: mockups2;
+  align-self: center;
+  justify-self: center;
 }
 
 #box3 {
   grid-area: mockupboxes3;
+  align-self: center;
+  justify-self: center;
 }
 
 #mockup-name3 {
   grid-area: mockups3;
+  align-self: center;
+  justify-self: center;
 }
 
 #box4 {
   grid-area: mockupboxes4;
+  align-self: center;
+  justify-self: center;
 }
 
 #mockup-name4 {
   grid-area: mockups4;
+  align-self: center;
+  justify-self: center;
 }
 
 #column2 {
